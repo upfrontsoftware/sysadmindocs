@@ -11,6 +11,9 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   server_installation_guide
+   backups
+
 Indices and tables
 ==================
 

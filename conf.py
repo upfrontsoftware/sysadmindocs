@@ -41,7 +41,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Sys Admin Docs'
-copyright = u'2012, Rijk Stofberg'
+copyright = u'2012, Upfront Systems'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -179,7 +179,7 @@ htmlhelp_basename = 'SysAdminDocsdoc'
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
   ('index', 'SysAdminDocs.tex', u'Sys Admin Docs Documentation',
-   u'Rijk Stofberg', 'manual'),
+   u'Upfront Systems', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -212,7 +212,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'sysadmindocs', u'Sys Admin Docs Documentation',
-     [u'Rijk Stofberg'], 1)
+     [u'Upfront Systems'], 1)
 ]
 
 
@@ -220,9 +220,9 @@ man_pages = [
 
 # Bibliographic Dublin Core info.
 epub_title = u'Sys Admin Docs'
-epub_author = u'Rijk Stofberg'
-epub_publisher = u'Rijk Stofberg'
-epub_copyright = u'2012, Rijk Stofberg'
+epub_author = u'Upfront Systems'
+epub_publisher = u'Upfront Systems'
+epub_copyright = u'2012, Upfront Systems'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.
