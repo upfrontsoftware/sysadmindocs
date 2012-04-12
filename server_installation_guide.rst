@@ -198,6 +198,19 @@ Exim
         apt-get install exim4-daemon-heavy
         dpkg-reconfigure exim4-config
 
+    .. warning::
+        
+        In cases were the OS does not support IP6, do the following:
+
+    ::
+
+        edit /etc/exim4/update-exim4.conf.conf en verander die bind interfaces
+        (verwyder ::1 uit die lys).
+
+        Run update-exim4.conf
+
+        Restart exim.
+
 Dovecot
 ~~~~~~~
     
@@ -339,7 +352,7 @@ Munin
     the varnish plugins.
 
 Nagios
-~~~~~
+~~~~~~
 
 Munin HAProxy graphs plugin
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
