@@ -1,0 +1,22 @@
+{#
+    upfrontsystems/layout.html
+    ~~~~~~~~~~~~~~~~~~~~~
+
+    Sphinx layout template for the Upfront Systems theme.
+
+    :copyright: Copyright 2012 by the Upfront Systems team, see AUTHORS.
+    :license: BSD, see LICENSE for details.
+#}
+{% extends "basic/layout.html" %}
+
+{%- block header %}
+<div id="portal-header">
+    <a href="index.html" id="portal-logo">
+        <img class="logo" src="{{ pathto('_static/headlogo.png' + logo, 1) }}" alt="Logo"/>
+    </a>
+</div>
+{% endblock %}
+
+{# put the sidebar before the body #}
+{% block sidebar1 %}{{ sidebar() }}{% endblock %}
+{% block sidebar2 %}{% endblock %}
