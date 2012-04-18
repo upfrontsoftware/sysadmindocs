@@ -1,0 +1,7 @@
+*.pyc
+.~lock.*
+_build
+bin
+include
+lib
+local
