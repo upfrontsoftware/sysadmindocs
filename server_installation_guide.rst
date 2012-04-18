@@ -210,6 +210,47 @@ Exim
         Run update-exim4.conf
 
         Restart exim.
+    
+    To change the exim4 configuration run:
+
+    ::
+        
+        dpkg-reconfigure exim4-config
+
+    Now test your config with:
+
+    ::
+
+        exim4 -bt <username>@<hostname>
+
+    If all is well it will display something like:
+
+    ::
+
+          R: dnslookup for <username>@<hostname>
+          <username>@<hostname>
+          router = dnslookup, transport = remote_smtp
+          host ASPMX.L.GOOGLE.COM      [173.194.78.27] MX=10
+          host ALT1.ASPMX.L.GOOGLE.COM [173.194.70.27] MX=20
+          host ALT2.ASPMX.L.GOOGLE.COM [173.194.69.27] MX=20
+          host ASPMX2.GOOGLEMAIL.COM   [74.125.43.27]  MX=30
+          host ASPMX4.GOOGLEMAIL.COM   [209.85.229.27] MX=30
+          host ASPMX5.GOOGLEMAIL.COM   [74.125.157.27] MX=30
+          host ASPMX3.GOOGLEMAIL.COM   [74.125.127.27] MX=30
+    
+    .. warning::
+
+       If you are running on a vserver, make sure what 'localhost' is before configuring the exim4 server. This is doubly important when dealing with a Plone server that might want to send mail via 'localhost'.
+    
+    Reference material:
+    
+        `cheatsheet`_
+
+        `command line docs`_
+
+        `how to read the exim4 logs`_
+
+        `send mail from the command line`_
 
 Dovecot
 ~~~~~~~
@@ -374,6 +415,25 @@ Munin HAProxy graphs plugin
 
 Backups
 ~~~~~~~
+
+External links
+~~~~~~~~~~~~~~
+
+    Exim4 `cheatsheet`_
+
+    .. _cheatsheet: http://bradthemad.org/tech/notes/exim_cheatsheet.php
+    
+    Exim4 `command line docs`_
+
+    .. _command line docs: http://www.exim.org/exim-html-current/doc/html/spec_html/ch05.html
+    
+    Exim4: `how to read the exim4 logs`_
+
+    .. _how to read the exim4 logs: http://www.exim.org/exim-html-current/doc/html/spec_html/ch49.html
+    
+    How to `send mail from the command line`_
+
+    .. _send mail from the command line: http://www.simplehelp.net/2008/12/01/how-to-send-email-from-the-linux-command-line/
 
 
 Indices and tables
