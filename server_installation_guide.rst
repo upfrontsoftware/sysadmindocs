@@ -23,6 +23,9 @@ SSH
         /etc/init.d/ssh restart
     
     .. warning::
+        Make sure that 'PermitRootLogin' is set to 'No' in /etc/ssh/sshd_config.
+
+    .. warning::
        Log in in new terminal before closing existing session, in case you screw up.
 
 Create user names
