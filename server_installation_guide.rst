@@ -201,6 +201,9 @@ Exim
         apt-get install exim4-daemon-heavy
         dpkg-reconfigure exim4-config
 
+    Typically we use exim4 configured as an internet site without any domains
+    accepted for relay, maildir format and we split the config into small files.
+
     .. warning::
         
         In cases were the OS does not support IP6, do the following:
