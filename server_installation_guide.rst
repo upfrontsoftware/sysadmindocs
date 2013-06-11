@@ -419,6 +419,38 @@ Munin HAProxy graphs plugin
 
         "telnet localhost 4949"  en tik "list"
 
+PostgreSQL 9.1 on Debian 6
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+    
+    *Note*
+    
+    The -t option passed to apt-get ensures that the correct versions are
+    installed for the target-release 'squeeze-backports'. Without that option
+    expect complaints about incorrect selection of libpq5 versions amongst
+    other things.
+
+    The -s option simulates the install and just helps us understand what is
+    selected for installation. You can skip that step if you are *really* sure
+    of what is going to happen.
+
+    Add Debian backports by updating /etc/apt/sources.list with::
+
+        deb     http://backports.debian.org/debian-backports squeeze-backports main
+    
+    Update the dpkg database::
+
+        sudo apt-get update
+    
+    Check what will be installed::
+
+        apt-get install -st squeeze-backports postgresql-9.1
+        apt-get install -st squeeze-backports postgresql-client
+
+    Install::
+
+        apt-get install -t squeeze-backports postgresql-contrib-9.1
+        apt-get install -t squeeze-backports postgresql-client
+
 Backups
 ~~~~~~~
 
